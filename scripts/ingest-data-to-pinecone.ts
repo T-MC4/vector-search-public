@@ -31,19 +31,20 @@ export const createVectorStore = async (labelType: string) => {
 
         // Parse the jsonContent and replace every fillerID with the actual filler text
         if (labelType === 'filler-labels') {
-          const contentWithFillerText = jsonContent.map(
-            (obj: fillerObject) => ({
-              pageContent: obj.pageContent,
-              metadata: {
-                fillerID: obj.metadata.fillerID,
-                fillerText: turnIdIntoText(obj),
-                category: obj.metadata.category,
-              },
-            }),
-          );
-          console.log(
-            'fillerJSON with fillerText property created successfully',
-          );
+          const contentWithFillerText = jsonContent;
+          // const contentWithFillerText = jsonContent.map(
+          //   (obj: fillerObject) => ({
+          //     pageContent: obj.pageContent,
+          //     metadata: {
+          //       fillerID: obj.metadata.fillerID,
+          //       fillerText: turnIdIntoText(obj),
+          //       category: obj.metadata.category,
+          //     },
+          //   }),
+          // );
+          // console.log(
+          //   'fillerJSON with fillerText property created successfully',
+          // );
 
           // save json with fillerText
           await fs.writeFile(
