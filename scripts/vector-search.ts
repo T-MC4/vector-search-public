@@ -1,6 +1,8 @@
 import { embedDocs } from '../utils/customDocEmbedder';
 import { allShortFillers } from '@/utils/fillers/shortFillers';
 
+// IGNORE THIS CODE - THIS IS PURELY FOR TESTING AND ISN'T BEING USED ANYWHERE IN THE APP
+
 // retrieve the data from pinecone & query it
 const vectorStore = await embedDocs('', false);
 console.time('Pinecone Timer');
