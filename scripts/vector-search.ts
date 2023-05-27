@@ -1,4 +1,4 @@
-import { embedDocs } from '../utils/customDocEmbedder';
+import { embedDocs } from '../utils/pineconeEmbed';
 import { allShortFillers } from '@/utils/fillers/shortFillers';
 
 // IGNORE THIS CODE - THIS IS PURELY FOR TESTING AND ISN'T BEING USED ANYWHERE IN THE APP

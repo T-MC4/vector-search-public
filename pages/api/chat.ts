@@ -1,6 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { embedDocs } from '@/utils/customDocEmbedder';
-import got from 'got';
+import { embedDocs } from '@/utils/pineconeEmbed';
 // import { pinecone } from '@/utils/pinecone-client';
 // import { allShortFillers } from '@/utils/fillers/shortFillers';
 // import { allLongFillers } from '@/utils/fillers/longFillers';
