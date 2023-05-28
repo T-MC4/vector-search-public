@@ -15,12 +15,15 @@
     "label": "tsx -r dotenv/config scripts/create-labeled-data.ts",
     "ingest": "tsx -r dotenv/config scripts/ingest-data-to-pinecone.ts",
     "vector-search": "tsx -r dotenv/config scripts/vector-search.ts",
+    "vector-search-weaviate": "tsx -r dotenv/config tests/weaviate-test.ts",
     "output": "tsx -r dotenv/config scripts/run.ts"
   },
   "dependencies": {
     "@microsoft/fetch-event-source": "^2.0.1",
     "@pinecone-database/pinecone": "0.0.12",
     "@radix-ui/react-accordion": "^1.1.1",
+    "@tensorflow-models/universal-sentence-encoder": "^1.3.3",
+    "@tensorflow/tfjs": "^4.6.0",
     "clsx": "^1.2.1",
     "dotenv": "^16.0.3",
     "hnswlib-node": "^1.4.2",
@@ -36,6 +39,7 @@
     "weaviate-ts-client": "^1.3.1"
   },
   "devDependencies": {
+    "@tensorflow/tfjs-converter": "^4.6.0",
     "@types/fs-extra": "^11.0.1",
     "@types/node": "^18.16.3",
     "@types/react": "^18.2.0",
