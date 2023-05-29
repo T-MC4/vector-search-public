@@ -28,6 +28,7 @@ async function initPinecone() {
 const pinecone = await initPinecone();
 const index = pinecone.Index(PINECONE_INDEX_NAME);
 
+const t0 = performance.now();
 // OPENAI EMBEDDING
 const arr = await fetch('https://api.openai.com/v1/embeddings', {
   method: 'POST',
@@ -49,12 +50,12 @@ const {
   data: [{ embedding }],
 } = await arr.json();
 console.log(embedding);
+const t1 = performance.now();
 
 // EMPTY EMBEDDING
 // let embedding = new Array(1536).fill(0);
 
 // TIMER START
-const t0 = performance.now();
 const queryResponse = await index.query({
   queryRequest: {
     vector: embedding,
@@ -65,6 +66,5 @@ const queryResponse = await index.query({
   },
 });
 const results = queryResponse.matches;
-const t1 = performance.now();
 
 console.log(`This code took ${t1 - t0} milliseconds.`);

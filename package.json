@@ -16,6 +16,7 @@
     "ingest": "tsx -r dotenv/config scripts/ingest-data-to-pinecone.ts",
     "vector-search": "tsx -r dotenv/config scripts/vector-search.ts",
     "vector-search-weaviate": "tsx -r dotenv/config tests/weaviate-test.ts",
+    "vector-search-pinecone": "tsx -r dotenv/config tests/pinecone-test.js",
     "output": "tsx -r dotenv/config scripts/run.ts"
   },
   "dependencies": {

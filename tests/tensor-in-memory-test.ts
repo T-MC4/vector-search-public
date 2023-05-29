@@ -74,6 +74,8 @@ const zipWith = (f, xs, ys) => {
   return (xs.length <= ny ? xs : xs.slice(0, ny)).map((x, i) => f(x, ys[i]));
 };
 
+// ----------------------------------
+
 // import * as hub from 'tensorflow_hub'
 
 // const model = hub.KerasLayer("https://tfhub.dev/google/nnlm-en-dim128/2")
